@@ -1,10 +1,21 @@
-body {
-  filter: invert(88%);
-  background-color: #1f1f1f !important;
+html {
+  background-color: #1A1A1A !important;
 }
 
+body {
+  filter: invert(90%) hue-rotate(-180deg);
+  background-color: transparent !important;
+}
+
+#jira-body img,
+#page-body img,
 #page img,
 .img-wrapper,
-span[role="img"] {
-  filter: invert(88%);
+span[role="img"],
+img {
+  filter: invert(100%) hue-rotate(-180deg); 
+}
+
+#helpPanelContainer > div > div {
+  height: auto;
 }
