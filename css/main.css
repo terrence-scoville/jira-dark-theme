@@ -31,12 +31,8 @@ body {
   background-color: #dadada !important;
 }
 
-#jira-body img,
-#page-body img,
-#page img,
-.img-wrapper,
 span[role="img"],
-*[role="img"],
+div[role="img"],
 img {
   filter: invert(1) hue-rotate(180deg); 
 }
