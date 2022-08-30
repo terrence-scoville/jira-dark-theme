@@ -23,6 +23,9 @@
       ],
       "css": [
         "css/main.css"
+      ],
+      "js": [
+        "js/contentScript.js"
       ]
     }
   ]
