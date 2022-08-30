@@ -3,13 +3,13 @@ function scrambleList() {
   for (var i = ul.children.length; i >= 0; i--) {
       ul.appendChild(ul.children[Math.random() * i | 0]);
   }
+  console.log('SCRAMBLED');
 }
 
-chrome.runtime.onMessage.addListener(
-  function(message, callback) {
-    if (message == "runContentScript"){
-      chrome.tabs.executeScript({
-        function: scrambleList
-      });
-    }
+
+chrome.action.onClicked.addListener((tab) => {
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: scrambleList
+  });
 });
