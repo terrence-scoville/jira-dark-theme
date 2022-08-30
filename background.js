@@ -5,11 +5,12 @@ function scrambleList() {
   }
 }
 
-chrome.action.onClicked.addListener((tab) => {
-  if(!tab.url.includes("chrome://")) {
-    chrome.scripting.executeScript({
+chrome.runtime.onMessage.addListener(
+  function(message, callback) {
+    if (message == "runContentScript"){
+      chrome.tabs.executeScript({
       target: { tabId: tab.id },
-      function: scrambleList
-    });
-  }
-});
+        function: scrambleList
+      });
+    }
+  });
