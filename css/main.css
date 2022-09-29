@@ -33,7 +33,8 @@ body {
 
 span[role="img"],
 div[role="img"],
-img {
+img,
+.css-ob4lje {
   filter: invert(1) hue-rotate(180deg); 
 }
 
