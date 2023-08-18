@@ -4,7 +4,7 @@ function scrambleList() {
   //     ul.appendChild(ul.children[Math.random() * i | 0]);
   // }
 
-  var ul = document.querySelector('._otyrzwfg > fieldset');
+  var ul = document.querySelector('._otyrxy5q > fieldset');
   for (var i = ul.children.length; i >= 0; i--) {
       ul.appendChild(ul.children[Math.random() * i | 0]);
   }
